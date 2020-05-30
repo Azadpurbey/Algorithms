@@ -1,22 +1,27 @@
-#ifndef AZAD
-#include<bits/stdc++.h>
+#ifndef AZAD   
+ #include<bits/stdc++.h>
   #define f(i,a,b) for(ll i=a;i<b;i++)
   #define fr(i,a,b) for(ll i=a;i>b;i--)  
   #define ll long long
-  #define vll vector<long long>
+  #define vll vector<ll>
+  #define vv vector<vll>
   #define mll map<ll,ll>
   #define sll set<ll>
-  #define pll pair<long long,long long>
+  #define pll pair<ll,ll>
   #define pb(x) push_back(x)
   #define F first
   #define S second
   #define print(v) for(auto it:v)cout<<it<<" ";cout<<endl;
-  #define mod 1000000007//10^9+7
-  #define it(v) v.begin(),v.end()
-  #define itr(v) v.rbegin(),v.rend()
+  #define all(v) v.begin(),v.end()
+  #define allr(v) v.rbegin(),v.rend()
+  #define p4(x,y,z,w) cout<<"x="<<x<<" y="<<y<<" z="<<z<<" w="<<w<<endl
+  #define p3(x,y,z) cout<<"x="<<x<<" y="<<y<<" z="<<z<<endl
+  #define p2(x,y) cout<<"x="<<x<<" y="<<y<<endl
+  #define p1(x) cout<<"x="<<x<<endl
   #define IOS ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
   #define InputOutput freopen("input.txt","r",stdin);//freopen("output.txt","w",stdout);
-using namespace std;
+  const int mod = 1000000007;//10^9+7
+ using namespace std; 
 #endif
 
 ll Ceil(ll a,ll b){
@@ -67,7 +72,7 @@ void NCR(ll N){
 }
 
 void solve(){
-  cout<<__gcd(525,63);
+  cout<<__gcd(525,63)<<"done";
 }
 
 int main(){
