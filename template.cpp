@@ -21,6 +21,7 @@
   #define IOS ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
   #define InputOutput freopen("input.txt","r",stdin);//freopen("output.txt","w",stdout);
   const int mod = 1000000007;//10^9+7
+  const ll INF=9000000000000000000;  // 9*10^18
  using namespace std; 
 #endif
 

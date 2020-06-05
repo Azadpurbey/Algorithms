@@ -15,17 +15,24 @@
   #define IOS ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 using namespace std;
 
-bool isNotCycle(ll root,list<ll> adj[],vll &vis){
-    vis[root]=0;
+bool isCycle(ll root,list<ll> adj[],vll &vis){
+  vis[root]=0;
+  queue<ll>qu;
+  qu.push(root);
+  while(!qu.empty()){
+    ll cur=qu.front();
+    cout<<cur;
+    qu.pop();
     for(auto it:adj[cur]){
-        if(vis[it]==0)return false;
+        if(vis[it]==0)return true;
         if(vis[it]==-1){
           vis[it]=0;
-          isNotCycle(it,adj,vis);
+          qu.push(it);
         }
     }
+    vis[cur]=1;
   }
-  return true;
+  return false;
 }
 
 

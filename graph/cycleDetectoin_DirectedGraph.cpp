@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>       //In directed Graph
   #define f(i,a,b) for(int i=a;i<b;i++)
   #define fr(i,a,b) for(int i=a;i>b;i--)  
   #define ll long long
@@ -16,22 +16,15 @@
 using namespace std;
 
 bool isCycle(ll root,list<ll> adj[],vll &vis){
-  vis[root]=1;
-  queue<ll>qu;
-  qu.push(root);
-  while(!qu.empty()){
-    ll cur=qu.front();
-    cout<<cur;
-    qu.pop();
-    for(auto it:adj[cur]){
-        if(vis[it]==0)return true;
-        if(vis[it]==-1){
-          vis[it]=0;
-          qu.push(it);
-        }
+  vis[root]=0;
+  for(auto it:adj[root]){
+    if(vis[it]==0)return true;
+    if(vis[it]==-1){
+      vis[it]=0;
+      isCycle(it,adj,vis);
     }
-    vis[cur]=1;
   }
+  vis[root]=1;
   return false;
 }
 
