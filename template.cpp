@@ -12,18 +12,30 @@
   #define F first
   #define S second
   #define print(v) for(auto it:v)cout<<it<<" ";cout<<endl;
+  #define fill(v,a) memset(v,a,sizeof(v))
   #define all(v) v.begin(),v.end()
   #define allr(v) v.rbegin(),v.rend()
-  #define p4(x,y,z,w) cout<<"x="<<x<<" y="<<y<<" z="<<z<<" w="<<w<<endl
   #define p3(x,y,z) cout<<"x="<<x<<" y="<<y<<" z="<<z<<endl
   #define p2(x,y) cout<<"x="<<x<<" y="<<y<<endl
   #define p1(x) cout<<"x="<<x<<endl
+  #define p(s,x) cout<<s<<" "<<x<<endl
   #define IOS ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
   #define InputOutput freopen("input.txt","r",stdin);//freopen("output.txt","w",stdout);
   const int mod = 1000000007;//10^9+7
   const ll INF=9000000000000000000;  // 9*10^18
  using namespace std; 
 #endif
+
+vector<bool> prime(100000000,true);
+void create_prime(){
+  prime[0]=prime[1]=false;
+  for(int i=2;i*i<100000000;i++){
+    if(prime[i]){
+      for(int j=i;i*j<100000000;j++)
+        prime[i*j]=false;
+    }
+  }
+}
 
 ll Ceil(ll a,ll b){
   return (a+(b-1))/b;
