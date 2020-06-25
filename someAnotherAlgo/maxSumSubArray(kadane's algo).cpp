@@ -2,13 +2,13 @@
 using namespace std;
 
 int max_sum_array(int* ar,int n){
-    int maxSum=0,maxSumTillNow=0;
-    for(int i=0;i<n;i++){
-        maxSumTillNow+=ar[i];
-        if(maxSumTillNow<0)maxSumTillNow=0;
-        if(maxSum<maxSumTillNow)maxSum=maxSumTillNow;
-    }
-return maxSum;
+  int Max=0,cur=0;
+  for(int i=0;i<n;i++){
+    cur+=ar[i];
+    if(cur<0)cur=0;
+    if(Max<cur)Max=cur;
+  }
+  return Max;
 }
 
 int main(){
