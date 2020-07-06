@@ -17,7 +17,7 @@ ll binarySearchTree(int n){
 ll binaryTree(int n){
     ll ans=binarySearchTree(n);
     ll a=1;
-    for(int i=2;i<=n;i++)a*=i;
+    for(int i=2;i<=n;i++)a*=i;  // binarySearchTree*(n!);
     return ans*a;
 }
 

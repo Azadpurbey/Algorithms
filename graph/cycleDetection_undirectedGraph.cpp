@@ -24,11 +24,11 @@ bool isCycle(ll root,list<ll> adj[],vll &vis){
     cout<<cur;
     qu.pop();
     for(auto it:adj[cur]){
-        if(vis[it]==0)return true;
-        if(vis[it]==-1){
-          vis[it]=0;
-          qu.push(it);
-        }
+      if(vis[it]==0)return true;
+      if(vis[it]==-1){
+        vis[it]=0;
+        qu.push(it);
+      }
     }
     vis[cur]=1;
   }
@@ -49,7 +49,14 @@ int main(){
     adj[b].pb(a);
   }
 
-  if(isCycle(0,adj,vis))cout<<"Cycle found"<<endl;
-  else cout<<"No cycle"<<endl;
+  for(int i=0;i<V;i++){
+    if(vis[i]==-1){
+      if(isCycle(i,adj,vis)){
+        cout<<"Cycle found"<<endl;
+        return 0;
+      }  
+    }
+  }
+  cout<<"No cycle found"<<endl;
   return 0;
 }
