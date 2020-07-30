@@ -6,12 +6,6 @@ using namespace std;
 #define pii pair<int,int>
 #define mii map<int,int>
 #define vi vector<int>
-// class compare{
-//   public:
-//   bool operator()(pii a,pii b){
-//     return a.first>b.first;
-//   }
-// };
 ll Mst(list<pii>adj[],ll V){
   ll ans=0;
   pii cur;
@@ -24,12 +18,11 @@ ll Mst(list<pii>adj[],ll V){
     pq.pop();
     if(visited[cur.second]==0){
       visited[cur.second]=1;
-      // cout<<cur.first<<endl;
-        ans+=cur.first;
-        for(auto it:adj[cur.second]){
-          if(visited[it.second]==0)
-              pq.push(it);
-        }  
+      ans+=cur.first;
+      for(auto it:adj[cur.second]){
+        if(visited[it.second]==0)
+          pq.push(it);
+      }  
     }
   }
   return ans;
@@ -44,8 +37,6 @@ int main(){
     adj[a].push_back(make_pair(w,b));
     adj[b].push_back(make_pair(w,a));
   }
-
-  ll ans=Mst(adj,V);
-   cout<<ans;
+  cout<<Mst(adj,V);
   return 0;
 } 
