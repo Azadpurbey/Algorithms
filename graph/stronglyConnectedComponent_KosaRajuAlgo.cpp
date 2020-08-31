@@ -25,7 +25,7 @@ int main(){
   for(int i=0;i<E;i++){
     cin>>a>>b;
     adj1[a].pb(b);
-    adj2[b].pb(a);
+    adj2[b].pb(a);  // reverse graph
   }
   for(int i=1;i<=V;i++){
     if(vis[i]==-1)dfs(i,adj1,vis,hold);
