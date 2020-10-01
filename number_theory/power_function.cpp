@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
-#define mod 10000007 
+#define mod 1000000007 
 int power(ll x,ll n){
   if(x==0)return 0;
   if(n==0)return 1;
