@@ -1,4 +1,5 @@
 #include<bits/stdc++.h> // Min character req to add in starting to make it a palindrom 
+#include<string.h>
 using namespace std;
 
 int minChar(string A) {
