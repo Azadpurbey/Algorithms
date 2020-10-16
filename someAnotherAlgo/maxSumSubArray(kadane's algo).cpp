@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//this is a way to comment anything
 int max_sum_array(int* ar,int n){
   int Max=0,cur=0;
   for(int i=0;i<n;i++){
