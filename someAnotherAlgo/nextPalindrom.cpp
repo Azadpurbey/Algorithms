@@ -1,4 +1,5 @@
-#include<bits/stdc++.h> //spoj PALIN
+#include<bits/stdc++.h> \
+#include<iostream>//spoj PALIN
 using namespace std;
 #define ll long long
 #define For(a,b,c) for(int i=a;i<b;i+=c);
