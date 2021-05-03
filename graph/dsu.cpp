@@ -25,20 +25,29 @@
   const ll INF=9*1e18;  // 9*10^18
  using namespace std; 
 #endif
-ll root(vll &dsu,ll a){
-  if(dsu[a]==a)return dsu[a];
-  dsu[a]=root(dsu,dsu[a]);  // optimisation
-  return dsu[a];
-}
-
-void Union(vll &dsu,vll &freq,ll a,ll b){
-  ll a_root=root(dsu,a);
-  ll b_root=root(dsu,b);
-  if(freq[b_root]<freq[a_root])   //optimization
-    swap(a_root,b_root);
-  dsu[a_root]=b_root;
-  freq[b_root]+=freq[a_root];
-}
+struct DSU{
+	vll dsu,freq;
+	DSU(ll n){
+		for(int i=0;i<=n;i++){
+			dsu.pb(i);
+			freq.pb(1);
+		}		
+	}
+	ll root(ll a){
+		if(dsu[a]==a)return dsu[a];
+		dsu[a]=root(dsu[a]);  // optimisation
+		return dsu[a];
+	}
+	void Union(ll a,ll b){
+		ll a_root=root(a);
+		ll b_root=root(b);
+    if(a_root==b_root)return;
+		if(freq[b_root]<freq[a_root])   //optimization
+			swap(a_root,b_root);
+		dsu[a_root]=b_root;
+		freq[b_root]+=freq[a_root];
+	}
+};
 
 int main(){
   freopen("input.txt","r",stdin);

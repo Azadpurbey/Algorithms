@@ -1,0 +1,8 @@
+int number_of_set_bit=__builtin_popcount(int);
+int number_of_set_bit=__builtin_popcountl(long);
+int number_of_set_bit=__builtin_popcountll(long long);
+
+ar.insert(ar.begin()+3,9); insert 9 at index 3;
+ar.erase(remove(ar.begin(),ar.end(),1),ar.end());  // delete all given element
+
+least signeficant bit = x&(-x)

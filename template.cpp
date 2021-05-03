@@ -12,15 +12,15 @@
   #define F first
   #define S second
   #define print(v) for(auto it:v)cout<<it<<" ";cout<<endl;
-  #define fill(v,a) memset(v,a,sizeof(v))
+  #define fill(dp,a) memset(dp,a,sizeof(dp))
   #define all(v) v.begin(),v.end()
   #define allr(v) v.rbegin(),v.rend()
   #define p2(x,y) cout<<"x="<<x<<" y="<<y<<endl
   #define p1(x) cout<<"x="<<x<<endl
   #define IOS ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
-  #define InputOutput freopen("input.txt","r",stdin);//freopen("output.txt","w",stdout);
-  const int mod = 1000000007;//10^9+7
-  const ll INF=9000000000000000000;  // 9*10^18
+  #define InputOutput freopen("input.txt","r",stdin);
+  const ll mod = 1e9+7;//10^9+7
+  const ll INF=9*1e18;  // 9*10^18
  using namespace std; 
 #endif
 
@@ -90,11 +90,16 @@ int main(){
   #ifndef ONLINE_JUDGE 
     InputOutput
   #endif
+  double _tBeg=clock();
   IOS
   ll q=1;
   //cin>>q;
   while(q--){
     solve();
   }
+  #ifndef ONLINE_JUDGE
+    double _tEnd=clock();
+    printf("total time %.6f\n",(_tEnd-_tBeg)/CLOCKS_PER_SEC);
+  #endif
   return 0;
 }  

@@ -1,3 +1,5 @@
 # Algorithms
-My Algo notes,
-Collection of all Important Algorithms and DataStructures
+
+### My Algo notes,
+
+#### Collection of all Important Algorithms and Data Structures
